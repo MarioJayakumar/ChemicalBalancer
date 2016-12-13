@@ -20,6 +20,7 @@ public class ChemicalBalancer{
 		setFile(gf);
 		result = "";
 		ArrayList<String> original = new ArrayList<String>();
+		input = addSpace(input);
 		String [] ppap = input.split(" ");
 		for(String ppop:ppap)
 		{
@@ -339,16 +340,28 @@ public class ChemicalBalancer{
 
 public String addSpace(String n)
 {
-	String result ="";
 	int count = 0;
 	while(count<n.length())
 	{
 		if(n.indexOf(count)=='=' || n.indexOf(count) == '+')
 		{
+			StringBuilder built = new StringBuilder(n);
+			if(n.indexOf(count+1) != ' ')
+			{
+				//add space at count +1
+				built.insert(count+1,' ');
+			}
 
+			if(n.indexOf(count-1) != ' ')
+			{
+				//add space at count -1
+				built.insert(count, ' ');
+			}
+			n = built.toString();
 		}
+		count++;
 	}
-	return result;
+	return n;
 }
 
 
