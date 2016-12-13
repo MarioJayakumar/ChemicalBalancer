@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:weightSum="1">
+
+
+
+    <EditText
+        android:typeface="normal"
+        android:id= "@+id/enter_equation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_equation"
+        android:inputType="textFilter"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="40dp"
+        android:layout_weight="0.40" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Clear"
+            android:onClick="clearText"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:background="@color/buttonBack"
+            android:textColor="@color/white"
+            android:layout_weight="0.50" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/button_send"
+            android:onClick="calculateEquation"
+            android:background="@color/buttonBack"
+            android:textColor="@color/white"
+            android:layout_weight="0.50" />
+
+    </LinearLayout>
+
+    <TextView android:id= "@+id/output_text"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:layout_weight="0.40" />
+
+    <Button android:id="@+id/showWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:text="Show Work"
+        android:background="@color/buttonBack"
+        android:textColor="@color/white"
+
+        android:onClick="showWork"/>
+
+
+</LinearLayout>
+

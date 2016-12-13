@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chemical Balancer</string>
+    <string name="enter_equation">Enter An Equation</string>
+    <string name="button_send">Go</string>
+</resources>
