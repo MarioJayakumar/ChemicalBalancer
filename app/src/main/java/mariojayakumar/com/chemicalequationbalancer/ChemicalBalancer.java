@@ -343,20 +343,21 @@ public String addSpace(String n)
 	int count = 0;
 	while(count<n.length())
 	{
-		if(n.indexOf(count)=='=' || n.indexOf(count) == '+')
+		if(n.charAt(count)=='=' || n.charAt(count) == '+')
 		{
 			StringBuilder built = new StringBuilder(n);
-			if(n.indexOf(count+1) != ' ')
+			if(n.charAt(count+1) != ' ')
 			{
 				//add space at count +1
-				built.insert(count+1,' ');
+				built = built.insert(count+1,' ');
 			}
 
-			if(n.indexOf(count-1) != ' ')
+			if(n.charAt(count-1) != ' ')
 			{
 				//add space at count -1
-				built.insert(count, ' ');
+				built = built.insert(count, ' ');
 			}
+
 			n = built.toString();
 		}
 		count++;
