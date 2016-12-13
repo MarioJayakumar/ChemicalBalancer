@@ -337,7 +337,19 @@ public class ChemicalBalancer{
 		}
 	}
 
+public String addSpace(String n)
+{
+	String result ="";
+	int count = 0;
+	while(count<n.length())
+	{
+		if(n.indexOf(count)=='=' || n.indexOf(count) == '+')
+		{
 
+		}
+	}
+	return result;
+}
 
 
 
